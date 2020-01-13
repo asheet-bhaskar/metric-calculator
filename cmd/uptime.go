@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"strconv"
 
+	"github.com/kyokomi/emoji"
 	"github.com/spf13/cobra"
 )
 
@@ -43,5 +44,17 @@ var uptimeCmd = &cobra.Command{
 		uptimePercentage := float64(100) - downtimePercentage
 
 		fmt.Printf("%s uptime is = %.3f\n", args[0], uptimePercentage)
+
+		if uptimePercentage < 99.000 {
+			fmt.Println(emoji.Sprint("Improve uptime! :angry: "))
+		} else if uptimePercentage >= 99.999 {
+			fmt.Println(emoji.Sprint("Loved It! :heart:"))
+		} else if uptimePercentage >= 99.99 && uptimePercentage < 99.999 {
+			fmt.Println(emoji.Sprint("Awesome! Improve it :heart:"))
+		} else if uptimePercentage >= 99.9 && uptimePercentage < 99.99 {
+			fmt.Println(emoji.Sprint("Good Job, Improve it :heart:"))
+		} else if uptimePercentage >= 99.000 && uptimePercentage < 99.9 {
+			fmt.Println(emoji.Sprint("Nice, Improve it :heart:"))
+		}
 	},
 }
