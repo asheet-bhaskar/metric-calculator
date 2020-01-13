@@ -4,6 +4,11 @@ This is a CLI application with commands to calculate following metrics
 - allowed-downtime [TODO]
 
 
+#### Installation
+```
+go get github.com/asheet-bhaskar/metric-calculator
+```
+
 #### Uptime calculation
 ##### Command Syntax
 ```
