@@ -5,7 +5,7 @@ This is a CLI application with commands to calculate following metrics
 
 
 #### Uptime calculation
-#####Command
+##### Command Syntax
 ```
 uptime <software name> <monitoring duration> <downtime duration>
 ```
